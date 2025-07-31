@@ -30,3 +30,11 @@
 - Start database again
 - Note the reference of same object again
 - assert the state matches post transaction performed.
+
+# test database connection change when transation is in progress
+- connection is establised
+- transaction begins
+- execution in progress
+- ...
+- Connection closes / network snapped etc
+- assert that commit is not called in the process and no changes in database state is performed.
