@@ -31,10 +31,19 @@
 - Note the reference of same object again
 - assert the state matches post transaction performed.
 
-# test database connection change when transation is in progress
+Database Operations scenario
+
+<h4>test database connection change when transaction is in progress</h4>
 - connection is establised
 - transaction begins
 - execution in progress
 - ...
 - Connection closes / network snapped etc
 - assert that commit is not called in the process and no changes in database state is performed.
+
+<h4>Concurrency - Case</h4>
+
+- Pessimistic Lock
+- Optimistic Lock
+
+Test above scenarios in RDBMS (eg. postgres) and NoSQL Database (e.g. MongoDB) separately and note observations
